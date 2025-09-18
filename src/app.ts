@@ -3,6 +3,7 @@ import config from "config";
 import connect from "./utils/connect";
 import logger from "./utils/logger";
 import createServer from "./utils/server";
+import deserializeUser from "./middleware/deserializeUser";
 
 const port = config.get<number>("port");
 
@@ -13,3 +14,5 @@ app.listen(port, async () => {
 
   await connect();
 });
+
+
